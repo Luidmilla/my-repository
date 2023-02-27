@@ -1,5 +1,5 @@
 html {
-   font-family: 'Roboto' sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .page{
@@ -7,6 +7,13 @@ html {
    flex-direction: column ;
    min-height: 100vh;
    margin: 0;
+}
+
+.main-text{
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color:#000000
 }
 
 /*Header */
@@ -77,9 +84,9 @@ html {
     display: none;
     position: absolute;
     z-index: 2;
-    bottom: 0;
+    bottom: 50%;
     left: 50%;
-    transform: translate(-50%,-100%);
+    transform: translate(-50%,50%);
     box-sizing: border-box;
     width: 100%;
     max-width: 500px;
@@ -106,7 +113,7 @@ html {
     flex-direction: column;
 }
 
-.login-form > input{
+.login-form-input{
     width: 100%;
     max-width: 500px;
     min-height: 55px;
@@ -160,9 +167,23 @@ html {
     display: block;
 }
 
+.popup-close{
+    position: absolute;
+    top: -35px;
+    right: -25px;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+}
+
+.popup-close:hover{
+    border-radius: 50%;
+    transform: rotate(360deg);
+}
+
 /*Main */
 
 .main{
+    position: relative;
     width: 100%;
     max-width: 911px;
     margin: 0 auto;
@@ -202,6 +223,61 @@ em{
     color: rgba(207,85,16,1);
 }
 
+.intro-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.intro-aside{
+
+}
+
+.blockquote{
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 29px;
+    color: #646464
+}
+
+
+/* Student */
+
+.flower::before, .flower::after {
+    content: '🌸';
+    vertical-align: middle;
+    font-size: 0.8em;
+  }
+
+.students{
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.student{
+    padding-left: 50px;
+}
+
+.new-student{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    background-color: #3AAB28;
+    color: #FFFFFF;
+    padding: 2px 6px 2px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    text-decoration: none;
+    position: relative;
+    top: -336px;
+    left: 118px;
+}
+
+
 /* Footer */
 
 .footer{
@@ -235,9 +311,76 @@ em{
 
 }
 
-         @media (max-widht: 1300px){
-            .header{
-                width: 70%;
+/* Contacts */
+
+.text-info{
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+
+}
+
+.phone-number{
+    margin-top: 24px;
+    text-decoration: underline;
+}
+
+.about-photo{
+    max-width: 1250px;
+    width: 100%;
+    height: auto;
+}
+
+.map{
+    width: 100%;
+    max-width: 1300px;
+    min-height: 370px;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+ 
+/* Media */
+
+    @media (max-widht: 1000px){
+           .main{
+            box-sizing: border-box;
+            padding: 0 2vw;
+           }
+            
+           
+           .header{
+                justify-content: center;
+                padding: 1em 16px;
+                gap: 1em;
+            }
+
+            .blockquote{
+                margin-left: 50px;
+            }
+
+            .blockquote::after{
+                margin-right: 50px;
+            }
+
+            .intro-text{
+                margin-bottom: 40px;
+            }
+
+            .login-input{
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .login-password{
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .popup-close{
+                position: absolute;
+                top: -30px;
+                right: 0px;
             }
 
             .site-menu{
